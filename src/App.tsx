@@ -115,8 +115,7 @@ function National() {
       </main>
 
       <footer className="app-footer">
-        Data: CDC/ATSDR Social Vulnerability Index 2022 (GRASP OneMap services) · Boundaries:
-        U.S. Census Bureau via US Atlas · Built with OpenLayers + D3
+        <a href="https://www.atsdr.cdc.gov/place-health/php/svi/svi-data-documentation-download.html">CDC/ATSDR Social Vulnerability Index 2022, U.S. database</a>. U.S. Census county boundaries via US Atlas. <a href="/data/us-atlas-LICENSE.txt">US Atlas license notice</a>. This is an independent portfolio project by Cathy Shapiro. Use of these data and links does not imply endorsement by CDC, ATSDR, HHS, or the U.S. Government.
       </footer>
     </div>
   );

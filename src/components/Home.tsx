@@ -18,7 +18,11 @@ export default function Home() {
       <dt>TopoJSON + county FIPS</dt><dd>Join Census boundaries with CDC records using five-digit county identifiers.</dd>
       <dt>Vite + Railway</dt><dd>Build static assets and serve the application from a web server. Tennessee data is bundled for a reproducible demo.</dd>
     </dl></section>
-    <footer>Independent portfolio project using public CDC/ATSDR and Census data. <a href="https://github.com/cshapiro/grasp-svi-demo">GitHub repository</a> · <a href="https://data.cdc.gov/d/cpdh-8cna">Stroke mortality source</a> · <a href="https://www.atsdr.cdc.gov/place-health/php/svi/">SVI source</a></footer>
+    <footer>
+      <p>This is an independent portfolio project by Cathy Shapiro. Use of these data and links does not imply endorsement by CDC, ATSDR, HHS, or the U.S. Government.</p>
+      <p><a href="https://www.atsdr.cdc.gov/place-health/php/svi/svi-data-documentation-download.html">CDC/ATSDR Social Vulnerability Index 2022, U.S. database</a> · <a href="https://data.cdc.gov/d/cpdh-8cna">CDC stroke mortality data</a>, Tennessee county subset, under the <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL 1.0)</a>.</p>
+      <p><a href="/data/us-atlas-LICENSE.txt">US Atlas license notice</a> · <a href="https://github.com/cshapiro/grasp-svi-demo">GitHub repository</a></p>
+    </footer>
   </main>;
 }
 

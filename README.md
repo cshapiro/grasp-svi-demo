@@ -40,9 +40,10 @@ Production build: `npm run build`, then `npm run preview`.
 React 19 + TypeScript + Vite · OpenLayers 10 (map) · D3 7 (charts) ·
 topojson-client + us-atlas (boundaries)
 
-## Data sources
+## Data sources and notices
 
-- CDC/ATSDR Social Vulnerability Index 2022, GRASP OneMap services
-  (onemap.cdc.gov)
-- U.S. Census Bureau county cartographic boundaries (via us-atlas)
+This is an independent portfolio project by Cathy Shapiro. Use of these data and links does not imply endorsement by CDC, ATSDR, HHS, or the U.S. Government.
 
+- CDC/ATSDR, Geospatial Research, Analysis, and Services Program. [CDC/ATSDR Social Vulnerability Index 2022, U.S. database](https://www.atsdr.cdc.gov/place-health/php/svi/svi-data-documentation-download.html).
+- CDC, Division for Heart Disease and Stroke Prevention. [Stroke Mortality Data Among US Adults (35+) by State/Territory and County, 2021–2023](https://data.cdc.gov/d/cpdh-8cna). The [bundled Tennessee county subset](src/data/tn-stroke-2021-2023.json) is available under the [Open Database License (ODbL 1.0)](https://opendatacommons.org/licenses/odbl/1-0/). It includes the overall sex and race/ethnicity records.
+- County boundaries come from the U.S. Census Bureau via US Atlas. The [US Atlas copyright and permission notice](public/data/us-atlas-LICENSE.txt) accompanies the distributed map data.

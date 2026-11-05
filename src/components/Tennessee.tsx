@@ -72,6 +72,7 @@ export default function Tennessee() {
             </g>;
           })}
         </svg>
+        <p className="note"><a href="https://data.cdc.gov/d/cpdh-8cna">CDC stroke mortality data</a>, Tennessee county subset, under the <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL 1.0)</a>.</p>
         <div className="band"><strong>Percentile band</strong>{band.map((v,i)=><label key={i}>{i?"Max":"Min"} <input type="number" min={i?band[0]:0} max={i?100:band[1]} value={v} onChange={e=>{
           const n=e.target.valueAsNumber; if(Number.isFinite(n))setBand(i?[band[0],Math.max(band[0],Math.min(100,n))]:[Math.min(band[1],Math.max(0,n)),band[1]]);
         }}/></label>)}<button onClick={()=>setBand([0,100])}>Show all</button></div>
@@ -88,6 +89,6 @@ export default function Tennessee() {
       <tbody><tr><th scope="row">Stroke deaths per 100,000</th>{pins.map(id=><td key={id}><strong>{rate(id)?.toFixed(1) ?? "Unavailable"}</strong></td>)}</tr>
       {THEMES.map(t=><tr key={t.key}><th scope="row">{t.label} percentile</th>{rows.map(c=><td key={c.fips}>{pct(c[t.key])}</td>)}</tr>)}</tbody></table>
     </section>
-    <footer>County estimates describe places. Differences alone do not establish causes or statistical significance. SVI percentiles use the national 2022 reference. Stroke rates are spatially smoothed, age-adjusted three-year averages for 2021–2023, all races and sexes combined. Boundaries from U.S. Census via US Atlas.<p><a href="https://www.atsdr.cdc.gov/place-health/php/svi/">CDC/ATSDR Social Vulnerability Index</a> · <a href="https://data.cdc.gov/d/cpdh-8cna">CDC stroke mortality data</a> · <a href="https://www.cdc.gov/heart-disease-stroke-atlas/statistical-methods/index.html">Atlas methods</a></p></footer>
+    <footer>County estimates describe places. Differences alone do not establish causes or statistical significance. SVI percentiles use the national 2022 reference. Stroke rates are spatially smoothed, age-adjusted three-year averages for 2021–2023, all races and sexes combined. Boundaries from U.S. Census via US Atlas.<p><a href="https://www.atsdr.cdc.gov/place-health/php/svi/svi-data-documentation-download.html">CDC/ATSDR Social Vulnerability Index 2022, U.S. database</a> · <a href="https://data.cdc.gov/d/cpdh-8cna">CDC stroke mortality data</a> · <a href="https://www.cdc.gov/heart-disease-stroke-atlas/statistical-methods/index.html">Atlas methods</a> · <a href="/data/us-atlas-LICENSE.txt">US Atlas license notice</a></p><p>This is an independent portfolio project by Cathy Shapiro. Use of these data and links does not imply endorsement by CDC, ATSDR, HHS, or the U.S. Government.</p></footer>
   </main>;
 }
